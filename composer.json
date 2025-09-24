@@ -1,0 +1,24 @@
+{
+    "name": "friendsofouro/http-batch-contract",
+    "description": "Contract for a batch of HTTP Requests",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "psr/http-client": "^1.0"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.48",
+        "friendsofphp/php-cs-fixer": "^3.88"
+    },
+    "autoload": {
+        "psr-4": {
+            "FriendsOfOuro\\Http\\Batch\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
+        "sort-packages": true
+    }
+}
