@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace FriendsOfOuro\Http\Batch;
 
-interface ResponseBatchInterface
+interface ResponseBatchInterface extends \Countable
 {
     /**
      * @return BatchItemInterface[]
