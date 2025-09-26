@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace FriendsOfOuro\Http\Batch;
 
+use Psr\Http\Client\ClientExceptionInterface;
+use Psr\Http\Message\ResponseInterface;
+
 interface ResponseBatchInterface extends \Countable
 {
     /**
@@ -18,19 +21,19 @@ interface ResponseBatchInterface extends \Countable
     public function hasAnySuccesses(): bool;
 
     /**
-     * @return BatchItemInterface[]
+     * @return ResponseInterface[]
      */
-    public function getSuccessfulResults(): array;
+    public function getResponses(): array;
 
     /**
-     * @return BatchItemInterface[]
+     * @return ClientExceptionInterface[]
      */
-    public function getFailedResults(): array;
+    public function getExceptions(): array;
 
     /**
      * @param callable(BatchItemInterface): bool $predicate
      *
-     * @return BatchItemInterface[]
+     * @return static
      */
-    public function filter(callable $predicate): array;
+    public function filter(callable $predicate): static;
 }
