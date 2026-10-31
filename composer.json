@@ -7,7 +7,7 @@
         "psr/http-client": "^1.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.48",
+        "ergebnis/composer-normalize": "^2.56",
         "friendsofphp/php-cs-fixer": "^3.88"
     },
     "provide": {
